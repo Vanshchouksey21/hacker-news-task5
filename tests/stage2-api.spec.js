@@ -124,15 +124,15 @@ const topResponse = await retryTransient(
       `Title mismatch for story ${story.id}`
     ).toBeTruthy();
 
-    // expect.soft(
-    //   pointDrift,
-    //   `Point drift exceeded for story ${story.id}`
-    // ).toBeLessThanOrEqual(MAX_POINT_DRIFT);
+    expect.soft(
+      pointDrift,
+      `Point drift exceeded for story ${story.id}`
+    ).toBeLessThanOrEqual(MAX_POINT_DRIFT);
 
-    // expect.soft(
-    //   commentDrift,
-    //   `Comment drift exceeded for story ${story.id}`
-    // ).toBeLessThanOrEqual(MAX_COMMENT_DRIFT);
+    expect.soft(
+      commentDrift,
+      `Comment drift exceeded for story ${story.id}`
+    ).toBeLessThanOrEqual(MAX_COMMENT_DRIFT);
   }
 
   console.log('\n--- Per-story differences ---');
@@ -158,4 +158,19 @@ const topResponse = await retryTransient(
       maxCommentDrift,
     }),
   });
+
+  const softErrors = test.info().errors;
+
+console.log('\n--- Soft Failure Summary ---');
+
+if (softErrors.length === 0) {
+  console.log('No soft assertion failures.');
+} else {
+  console.log(`Total soft failures: ${softErrors.length}`);
+
+  for (const error of softErrors) {
+    console.log(`- ${error.message}`);
+  }
+}
+
 });
