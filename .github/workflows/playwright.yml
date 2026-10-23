@@ -1,0 +1,166 @@
+name: Hacker News Playwright Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  prepare-state:
+    name: Stage 1 - Prepare shared state
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Stage 1
+        run: >
+          npx playwright test tests/hacker-news.spec.js
+          --reporter=blob,./helpers/json-reporter.js
+        env:
+          CI: true
+
+      - name: Upload shared state
+        uses: actions/upload-artifact@v4
+        with:
+          name: hacker-news-state
+          path: state/hacker-news-state.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload Stage 1 blob report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-report-prepare
+          path: blob-report/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload Stage 1 JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-report-prepare
+          path: test-results/custom-report.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+  test:
+    name: Playwright shard ${{ matrix.shard }}
+    needs: prepare-state
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Download Stage 1 state
+        uses: actions/download-artifact@v4
+        with:
+          name: hacker-news-state
+          path: state/
+
+      - name: Run remaining tests
+        run: >
+          npx playwright test
+          --grep-invert "Stage 1: collect top 30 Hacker News stories"
+          --shard=${{ matrix.shard }}/2
+          --reporter=blob,./helpers/json-reporter.js
+        env:
+          CI: true
+
+      - name: Upload blob report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-report-${{ matrix.shard }}
+          path: blob-report/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-report-shard-${{ matrix.shard }}
+          path: test-results/custom-report.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: traces-shard-${{ matrix.shard }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  merge-reports:
+    name: Merge Playwright reports
+    if: always() && needs.prepare-state.result == 'success'
+    needs: [prepare-state, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download shard reports
+        uses: actions/download-artifact@v4
+        with:
+          path: all-blob-reports/
+          pattern: blob-report-*
+          merge-multiple: true
+
+      - name: Merge HTML report
+        run: npx playwright merge-reports --reporter=html all-blob-reports/
+
+      - name: Upload merged HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: merged-playwright-report
+          path: playwright-report/
+          if-no-files-found: ignore
+          retention-days: 14

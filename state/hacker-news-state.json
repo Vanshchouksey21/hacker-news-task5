@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-23T22:29:08.865Z",
+  "page": 1,
+  "stories": [
+    {
+      "id": "50212065",
+      "rank": 1,
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "domain": "kimi.ai",
+      "points": 597,
+      "commentCount": 361
+    },
+    {
+      "id": "50207910",
+      "rank": 2,
+      "title": "Apple Music 404 Not Found",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
+      "domain": "music.apple.com",
+      "points": 426,
+      "commentCount": 156
+    },
+    {
+      "id": "50213925",
+      "rank": 3,
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
+      "domain": "block.xyz",
+      "points": 130,
+      "commentCount": 47
+    },
+    {
+      "id": "50211474",
+      "rank": 4,
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
+      "domain": "blog.calif.io",
+      "points": 653,
+      "commentCount": 432
+    },
+    {
+      "id": "50214416",
+      "rank": 5,
+      "title": "OpenAI: Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "domain": "openai.com",
+      "points": 42,
+      "commentCount": 35
+    },
+    {
+      "id": "50202285",
+      "rank": 6,
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "url": "https://edjefferson.com/localwiki/",
+      "domain": "edjefferson.com",
+      "points": 1157,
+      "commentCount": 222
+    },
+    {
+      "id": "50214323",
+      "rank": 7,
+      "title": "We are all living inside of an obscure sci-fi film from 1970",
+      "url": "https://thanksforthatjim.bearblog.dev/we-are-all-living-inside-of-an-obscure-sci-fi-film-from-1970/",
+      "domain": "thanksforthatjim.bearblog.dev",
+      "points": 67,
+      "commentCount": 47
+    },
+    {
+      "id": "50169499",
+      "rank": 8,
+      "title": "The Real Kevin Bacon",
+      "url": "https://pudding.cool/2026/10/kevin-bacon/",
+      "domain": "pudding.cool",
+      "points": 197,
+      "commentCount": 58
+    },
+    {
+      "id": "50215530",
+      "rank": 9,
+      "title": "CVE Tracker",
+      "url": "https://cve.0xosprey.com/",
+      "domain": "cve.0xosprey.com",
+      "points": 15,
+      "commentCount": 0
+    },
+    {
+      "id": "50202114",
+      "rank": 10,
+      "title": "Canadians are running out of time to oppose Bill C-22",
+      "url": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
+      "domain": "eff.org",
+      "points": 255,
+      "commentCount": 124
+    },
+    {
+      "id": "50214218",
+      "rank": 11,
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "domain": "theverge.com",
+      "points": 141,
+      "commentCount": 63
+    },
+    {
+      "id": "50214994",
+      "rank": 12,
+      "title": "No Source Code? No Problem",
+      "url": "https://queue.acm.org/doi/10.1145/945131.945155",
+      "domain": "queue.acm.org",
+      "points": 8,
+      "commentCount": 1
+    },
+    {
+      "id": "50214983",
+      "rank": 13,
+      "title": "A whirlwind tour of systemd-nspawn containers",
+      "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
+      "domain": "quantum5.ca",
+      "points": 13,
+      "commentCount": 1
+    },
+    {
+      "id": "50177554",
+      "rank": 14,
+      "title": "A Bicycle Journey Across Brazil to Find a Vanishing Savanna",
+      "url": "https://e360.yale.edu/features/2026-film-contest-second-place-cerrado",
+      "domain": "e360.yale.edu",
+      "points": 6,
+      "commentCount": 1
+    },
+    {
+      "id": "50214325",
+      "rank": 15,
+      "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+      "url": "https://rune.build/blog/rune-1-3-release",
+      "domain": "rune.build",
+      "points": 14,
+      "commentCount": 0
+    },
+    {
+      "id": "50211746",
+      "rank": 16,
+      "title": "UUIDv7 doesn't have the properties you think it does",
+      "url": "https://alexsci.com/blog/uuidv7-is-weird/",
+      "domain": "alexsci.com",
+      "points": 93,
+      "commentCount": 78
+    },
+    {
+      "id": "50212124",
+      "rank": 17,
+      "title": "Animations for System Builders",
+      "url": "https://brooker.co.za/blog/2026/10/23/animations.html",
+      "domain": "brooker.co.za",
+      "points": 23,
+      "commentCount": 3
+    },
+    {
+      "id": "50202746",
+      "rank": 18,
+      "title": "Show HN: Impossible Machines: declaratively program the physical world",
+      "url": "https://www.impossiblemachines.xyz/",
+      "domain": "impossiblemachines.xyz",
+      "points": 48,
+      "commentCount": 14
+    },
+    {
+      "id": "50213791",
+      "rank": 19,
+      "title": "DNS: A Replacement for Finger",
+      "url": "https://altchan.org/sh/42",
+      "domain": "altchan.org",
+      "points": 12,
+      "commentCount": 11
+    },
+    {
+      "id": "50214447",
+      "rank": 20,
+      "title": "Sony Retires Its Last 4K Blu-ray Player in Japan, PS5 Is All That's Left",
+      "url": "https://www.techpowerup.com/354081/sony-retires-its-last-4k-blu-ray-player-in-japan-ps5-is-all-thats-left",
+      "domain": "techpowerup.com",
+      "points": 49,
+      "commentCount": 30
+    },
+    {
+      "id": "50199684",
+      "rank": 21,
+      "title": "LISP Comes of Age (1980)",
+      "url": "https://microship.com/lisp-comes-of-age/",
+      "domain": "microship.com",
+      "points": 54,
+      "commentCount": 15
+    },
+    {
+      "id": "50211729",
+      "rank": 22,
+      "title": "The Missed Opportunities of Sonic 06 (2025)",
+      "url": "https://isaacmarovitz.com/posts/sonic-06/",
+      "domain": "isaacmarovitz.com",
+      "points": 54,
+      "commentCount": 13
+    },
+    {
+      "id": "50200997",
+      "rank": 23,
+      "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
+      "url": "https://news.ycombinator.com/item?id=50200997",
+      "domain": "news.ycombinator.com",
+      "points": 576,
+      "commentCount": 627
+    },
+    {
+      "id": "50212668",
+      "rank": 24,
+      "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
+      "url": "https://twitter.com/robbietilton/status/2111936458923851923",
+      "domain": "twitter.com",
+      "points": 53,
+      "commentCount": 15
+    },
+    {
+      "id": "50195488",
+      "rank": 25,
+      "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
+      "url": "https://github.com/dsmurrell/onkey",
+      "domain": "github.com",
+      "points": 210,
+      "commentCount": 89
+    },
+    {
+      "id": "50205320",
+      "rank": 26,
+      "title": "Show HN: Swurf – Swipe through the real web",
+      "url": "https://swurf.org/",
+      "domain": "swurf.org",
+      "points": 40,
+      "commentCount": 25
+    },
+    {
+      "id": "50212320",
+      "rank": 27,
+      "title": "Can we replace a $150k Looker with a bucket of HTML files?",
+      "url": "https://david.lequin.dev/blog/bi-software-is-dead/",
+      "domain": "david.lequin.dev",
+      "points": 100,
+      "commentCount": 62
+    },
+    {
+      "id": "50209907",
+      "rank": 28,
+      "title": "Gemma-4-26B-A4B with 39-69% less thinking at same accuracy",
+      "url": "https://bottlecapai.com/post/thinkingcap-gemma-4-26b/",
+      "domain": "bottlecapai.com",
+      "points": 90,
+      "commentCount": 14
+    },
+    {
+      "id": "50212281",
+      "rank": 29,
+      "title": "Time Nuts (2005)",
+      "url": "http://leapsecond.com/time-nuts.htm",
+      "domain": "leapsecond.com",
+      "points": 27,
+      "commentCount": 22
+    },
+    {
+      "id": "50211504",
+      "rank": 30,
+      "title": "Total Historian",
+      "url": "https://www.theideasletter.org/essay/total-historian/",
+      "domain": "theideasletter.org",
+      "points": 18,
+      "commentCount": 4
+    }
+  ]
+}

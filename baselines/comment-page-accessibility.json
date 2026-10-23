@@ -1,0 +1,1367 @@
+[
+  {
+    "id": "aria-hidden-focus",
+    "impact": "serious",
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-10.8.1"
+    ],
+    "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+    "help": "ARIA hidden element must not be focusable or contain focusable elements",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-hidden-focus?application=playwright",
+    "nodes": [
+      {
+        "any": [],
+        "all": [
+          {
+            "id": "focusable-not-tabbable",
+            "data": null,
+            "relatedNodes": [
+              {
+                "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+                "target": [
+                  ".comtr.athing:nth-child(2) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+          }
+        ],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+        "target": [
+          ".comtr.athing:nth-child(2) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+        ],
+        "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+      },
+      {
+        "any": [],
+        "all": [
+          {
+            "id": "focusable-not-tabbable",
+            "data": null,
+            "relatedNodes": [
+              {
+                "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">root</a>",
+                "target": [
+                  ".comtr.athing:nth-child(3) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+          }
+        ],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">root</a>",
+        "target": [
+          ".comtr.athing:nth-child(3) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+        ],
+        "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+      },
+      {
+        "any": [],
+        "all": [
+          {
+            "id": "focusable-not-tabbable",
+            "data": null,
+            "relatedNodes": [
+              {
+                "html": "<a href=\"#17\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+                "target": [
+                  "a[href$=\"#17\"]"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+          }
+        ],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#17\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+        "target": [
+          "a[href$=\"#17\"]"
+        ],
+        "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+      }
+    ]
+  },
+  {
+    "id": "color-contrast",
+    "impact": "serious",
+    "tags": [
+      "cat.color",
+      "wcag2aa",
+      "wcag143",
+      "TTv5",
+      "TT13.c",
+      "EN-301-549",
+      "EN-9.1.4.3",
+      "ACT",
+      "RGAAv4",
+      "RGAA-3.2.1"
+    ],
+    "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span class=\"sitestr\">ycombinator.com</span>",
+        "target": [
+          ".sitestr"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span class=\"subline\">",
+        "target": [
+          ".subline"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span class=\"score\" id=\"score_1\">57 points</span>",
+        "target": [
+          "#score_1"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"user?id=pg\" class=\"hnuser\">pg</a>",
+        "target": [
+          ".subline > .hnuser[href=\"user?id=pg\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"item?id=1\">on Oct 9, 2006</a>",
+        "target": [
+          "span[title=\"2006-10-09T18:21:51\"] > a[href=\"item?id=1\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"hide?id=1&amp;goto=item%3Fid%3D1\">hide</a>",
+        "target": [
+          "a[href=\"hide?id=1&goto=item%3Fid%3D1\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"https://hn.algolia.com/?query=Y%20Combinator&amp;type=story&amp;dateRange=all&amp;sort=byDate&amp;storyText=false&amp;prefix&amp;page=0\" class=\"hnpast\">past</a>",
+        "target": [
+          ".hnpast"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"fave?id=1\">favorite</a>",
+        "target": [
+          "a[href=\"fave?id=1\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "7.0pt (9.33333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"item?id=1\">3&nbsp;comments</a>",
+        "target": [
+          ".subline > a[href=\"item?id=1\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 7.0pt (9.33333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"user?id=sama\" class=\"hnuser\">sama</a>",
+        "target": [
+          "a[href=\"user?id=sama\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"item?id=15\">on Oct 9, 2006</a>",
+        "target": [
+          "a[href=\"item?id=15\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"user?id=pg\" class=\"hnuser\">pg</a>",
+        "target": [
+          ".comhead > .hnuser[href=\"user?id=pg\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"item?id=17\">on Oct 9, 2006</a>",
+        "target": [
+          "a[href=\"item?id=17\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+        "target": [
+          ".comtr.athing:nth-child(2) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"user?id=dmon\" class=\"hnuser\">dmon</a>",
+        "target": [
+          "a[href=\"user?id=dmon\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"item?id=1079\">on Feb 25, 2007</a>",
+        "target": [
+          "a[href=\"item?id=1079\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span class=\"navs\"> | <a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">root</a> | <a href=\"#17\" class=\"clicky\" aria-hidden=\"true\">parent</a> <a class=\"togg clicky\" id=\"1079\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span></span>",
+        "target": [
+          ".comtr.athing:nth-child(3) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#15\" class=\"clicky\" aria-hidden=\"true\">root</a>",
+        "target": [
+          ".comtr.athing:nth-child(3) > td > table[border=\"0\"] > tbody > tr > .default > div:nth-child(1) > .comhead > .navs > .clicky[href$=\"#15\"][aria-hidden=\"true\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<a href=\"#17\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+        "target": [
+          "a[href$=\"#17\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "8.0pt (10.6667px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span class=\"yclinks\">",
+        "target": [
+          ".yclinks"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 8.0pt (10.6667px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "fgColor": "#828282",
+              "bgColor": "#f6f6ef",
+              "contrastRatio": 3.54,
+              "fontSize": "10.0pt (13.3333px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [
+              {
+                "html": "<table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">",
+                "target": [
+                  "#hnmain"
+                ]
+              }
+            ],
+            "impact": "serious",
+            "message": "Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 10.0pt (13.3333px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<form method=\"get\" action=\"//hn.algolia.com/\">Search: <input type=\"text\" name=\"q\" size=\"17\" autocorrect=\"off\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\"></form>",
+        "target": [
+          "form"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #828282, background color: #f6f6ef, font size: 10.0pt (13.3333px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+    ]
+  },
+  {
+    "id": "image-alt",
+    "impact": "critical",
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT7.a",
+      "TT7.b",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.1"
+    ],
+    "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+    "help": "Images must have alternative text",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/image-alt?application=playwright",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "has-alt",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an alt attribute"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<img src=\"y18.svg\" width=\"18\" height=\"18\" style=\"border:1px white solid; display:block\">",
+        "target": [
+          "img[src$=\"y18.svg\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      },
+      {
+        "any": [
+          {
+            "id": "has-alt",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an alt attribute"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<img src=\"s.gif\" height=\"1\" width=\"0\">",
+        "target": [
+          "img[width=\"0\"][height=\"1\"][src=\"s.gif\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      },
+      {
+        "any": [
+          {
+            "id": "has-alt",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an alt attribute"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<img src=\"s.gif\" height=\"1\" width=\"40\">",
+        "target": [
+          "img[width=\"40\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      },
+      {
+        "any": [
+          {
+            "id": "has-alt",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an alt attribute"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<img src=\"s.gif\" height=\"1\" width=\"80\">",
+        "target": [
+          "img[width=\"80\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      },
+      {
+        "any": [
+          {
+            "id": "has-alt",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an alt attribute"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<img src=\"s.gif\" height=\"10\" width=\"0\">",
+        "target": [
+          "img[height=\"10\"]"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      }
+    ]
+  },
+  {
+    "id": "label",
+    "impact": "critical",
+    "tags": [
+      "cat.forms",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.n",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ],
+    "description": "Ensure every form element has a label",
+    "help": "Form elements must have labels",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label?application=playwright",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "implicit-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an implicit (wrapped) <label>"
+          },
+          {
+            "id": "explicit-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element does not have an explicit <label>"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no title attribute"
+          },
+          {
+            "id": "non-empty-placeholder",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element has no placeholder attribute"
+          },
+          {
+            "id": "presentational-role",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "critical",
+            "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "critical",
+        "html": "<input type=\"text\" name=\"q\" size=\"17\" autocorrect=\"off\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\">",
+        "target": [
+          "input"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      }
+    ]
+  },
+  {
+    "id": "landmark-one-main",
+    "impact": "moderate",
+    "tags": [
+      "cat.semantics",
+      "best-practice"
+    ],
+    "description": "Ensure the document has a main landmark",
+    "help": "Document should have one main landmark",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-one-main?application=playwright",
+    "nodes": [
+      {
+        "any": [],
+        "all": [
+          {
+            "id": "page-has-main",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "moderate",
+            "message": "Document does not have a main landmark"
+          }
+        ],
+        "none": [],
+        "impact": "moderate",
+        "html": "<html lang=\"en\" op=\"item\">",
+        "target": [
+          "html"
+        ],
+        "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+      }
+    ]
+  },
+  {
+    "id": "link-name",
+    "impact": "serious",
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag244",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.2.4.4",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-6.2.1"
+    ],
+    "description": "Ensure links have discernible text",
+    "help": "Links must have discernible text",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-name?application=playwright",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "has-visible-text",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element does not have text that is visible to screen readers"
+          },
+          {
+            "id": "aria-label",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "aria-label attribute does not exist or is empty"
+          },
+          {
+            "id": "aria-labelledby",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+          },
+          {
+            "id": "non-empty-title",
+            "data": {
+              "messageKey": "noAttr"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element has no title attribute"
+          }
+        ],
+        "all": [],
+        "none": [
+          {
+            "id": "focusable-no-name",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element is in tab order and does not have accessible text"
+          }
+        ],
+        "impact": "serious",
+        "html": "<a href=\"https://news.ycombinator.com\"><img src=\"y18.svg\" width=\"18\" height=\"18\" style=\"border:1px white solid; display:block\"></a>",
+        "target": [
+          "a[href$=\"news.ycombinator.com\"]"
+        ],
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      }
+    ]
+  },
+  {
+    "id": "page-has-heading-one",
+    "impact": "moderate",
+    "tags": [
+      "cat.semantics",
+      "best-practice"
+    ],
+    "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+    "help": "Page should contain a level-one heading",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/page-has-heading-one?application=playwright",
+    "nodes": [
+      {
+        "any": [],
+        "all": [
+          {
+            "id": "page-has-heading-one",
+            "data": null,
+            "relatedNodes": [],
+            "impact": "moderate",
+            "message": "Page must have a level-one heading"
+          }
+        ],
+        "none": [],
+        "impact": "moderate",
+        "html": "<html lang=\"en\" op=\"item\">",
+        "target": [
+          "html"
+        ],
+        "failureSummary": "Fix all of the following:\n  Page must have a level-one heading"
+      }
+    ]
+  },
+  {
+    "id": "region",
+    "impact": "moderate",
+    "tags": [
+      "cat.keyboard",
+      "best-practice",
+      "RGAAv4",
+      "RGAA-9.2.1"
+    ],
+    "description": "Ensure all page content is contained by landmarks",
+    "help": "All page content should be contained by landmarks",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=playwright",
+    "nodes": [
+      {
+        "any": [
+          {
+            "id": "region",
+            "data": {
+              "isIframe": false
+            },
+            "relatedNodes": [],
+            "impact": "moderate",
+            "message": "Some page content is not contained by landmarks"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "moderate",
+        "html": "<center>",
+        "target": [
+          "body > center"
+        ],
+        "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+      }
+    ]
+  }
+]
